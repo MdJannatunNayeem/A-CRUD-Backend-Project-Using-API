@@ -22,7 +22,7 @@ export const Login=async(req,res)=>{
         }
         else {
             // Login Success Token Encode
-            let token=TokenEncode(data['email'],data['_id'])
+            let token=TokenEncode(data['phoneNumber'],data['_id'])
             return res.json({status:"success",Token:token,"Message":"User Login successfully Done"})
         }
 
